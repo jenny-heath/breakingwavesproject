@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import './App.css';
 import styled from 'styled-components';
-import Koro from '../static/koro.png';
+import Koro from '../static/kaleidescope.png';
+import {Link} from 'react-router-dom';
 
 // TODO: figure out how to actually place this background
 const BackgroundImage = styled.img`
@@ -20,7 +21,6 @@ const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* temp */
   color: white;
 `;
 
@@ -75,7 +75,11 @@ class App extends Component {
               <Title>THE BREAKING WAVES PROJECT</Title>
               <Subtitle>cultivating culture | shift connections</Subtitle>
             </TitleWrapper>
-            <LearnMoreLink>LEARN MORE</LearnMoreLink>
+            <LearnMoreLink>
+              <Link to="/about">
+                LEARN MORE
+              </Link>
+            </LearnMoreLink>
           </Wrapper>
         </header>
       </div>
