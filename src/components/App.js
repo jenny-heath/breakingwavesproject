@@ -36,12 +36,16 @@ const EventsWrapper = styled.div`
   font-family: 'Futura';
 `;
 
-const EventLinkLeft = styled.div`
+const EventLinkLeft = styled.a`
   margin: 20px;
+  text-decoration: none;
+  color: inherit;
 `;
 
-const EventLinkRight = styled.div`
+const EventLinkRight = styled.a`
   margin: 20px;
+  text-decoration: none;
+  color: inherit;
 `;
 
 const TitleWrapper = styled.div`
@@ -86,8 +90,8 @@ class App extends Component {
         <header className="App-header">
           <Wrapper>
             <EventsWrapper>
-              <EventLinkLeft>LA LAUNCH - MAY 9</EventLinkLeft>
-              <EventLinkRight>NYC LAUNCH - MAY 17</EventLinkRight>
+              <EventLinkLeft href="https://google.com" target="_blank">LA LAUNCH - MAY 9</EventLinkLeft>
+              <EventLinkRight href="https://google.com" target="_blank">NYC LAUNCH - MAY 17</EventLinkRight>
             </EventsWrapper>
             <TitleWrapper>
               <Title>THE BREAKING WAVES PROJECT</Title>

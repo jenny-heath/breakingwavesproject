@@ -36,7 +36,7 @@ const TopBar = styled.div`
 
 const Logo = styled(Link)`
   margin-left: 20px;
-  flex-grow: 1;
+  flex-grow: 5;
   text-decoration: none;
   color: white;
   :hover {
@@ -45,7 +45,7 @@ const Logo = styled(Link)`
 `;
 
 const SiteComing = styled.div`
-  flex-grow: 1;
+  flex-grow: 6;
 `;
 
 const FestComing = styled.div`
