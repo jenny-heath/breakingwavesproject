@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 // import './App.css';
 import styled from 'styled-components';
-import Koro from '../static/kaleidescope.png';
+// import Koro from '../static/kaleidescope.png';
+import Koro from '../static/kaleidescope2.png';
 import {Link} from 'react-router-dom';
 
 // TODO: figure out how to actually place this background
@@ -11,7 +12,7 @@ const BackgroundImage = styled.img`
   left: 0;
   min-height: 100%;
   min-width: 100%;
-  max-height: 150%;
+  max-height: 110%;
 `;
 
 const Wrapper = styled.div`
@@ -22,6 +23,8 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   color: white;
+  font-family: 'Catamaran';
+  background-color: #003348;
 `;
 
 const EventsWrapper = styled.div`
@@ -29,12 +32,16 @@ const EventsWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  font-size: 18px;
+  font-family: 'Futura';
 `;
 
 const EventLinkLeft = styled.div`
+  margin: 20px;
 `;
 
 const EventLinkRight = styled.div`
+  margin: 20px;
 `;
 
 const TitleWrapper = styled.div`
@@ -45,27 +52,38 @@ const TitleWrapper = styled.div`
   align-items: space-between;
 `;
 
-const LearnMoreLink = styled.div`
+const LearnMoreLink = styled(Link)`
   align-self: center;
   width: 100%;
   display: flex;
   justify-content: center;
+  margin: 20px;
+  font-size: 16px;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+  :hover {
+    color: #15697A;
+  }
 `;
 
 const Title = styled.div`
   align-self: center;
+  font-size: 26px;
+  font-weight: bold;
 `;
 
 const Subtitle = styled.div`
   align-self: center;
 `;
 
+// TODO: add back in later
+// <BackgroundImage src={Koro} />
 class App extends Component {
   render() {
     return (
       <div className="App">
         <header className="App-header">
-          <BackgroundImage src={Koro} />
           <Wrapper>
             <EventsWrapper>
               <EventLinkLeft>LA LAUNCH - MAY 9</EventLinkLeft>
@@ -75,10 +93,8 @@ class App extends Component {
               <Title>THE BREAKING WAVES PROJECT</Title>
               <Subtitle>cultivating culture | shift connections</Subtitle>
             </TitleWrapper>
-            <LearnMoreLink>
-              <Link to="/about">
-                LEARN MORE
-              </Link>
+            <LearnMoreLink to="/about">
+              LEARN MORE
             </LearnMoreLink>
           </Wrapper>
         </header>
