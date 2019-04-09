@@ -13,8 +13,8 @@ import {
 ReactDOM.render(
   <Router>
     <Switch>
-      <Route path='/about' component={About} />
-      <Route path='/' component={App} />
+      <Route path='/breakingwavesproject/about' component={About} />
+      <Route path='/breakingwavesproject' component={App} />
     </Switch>
   </Router>
 , document.getElementById('root'));
