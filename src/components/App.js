@@ -23,7 +23,7 @@ const Wrapper = styled.div`
   flex-direction: column;
   justify-content: space-between;
   color: white;
-  font-family: 'Catamaran';
+  font-family: 'Futura';
   background-color: #003348;
 `;
 
@@ -33,7 +33,6 @@ const EventsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   font-size: 18px;
-  font-family: 'Futura';
 `;
 
 const EventLinkLeft = styled.a`
@@ -79,6 +78,7 @@ const Title = styled.div`
 
 const Subtitle = styled.div`
   align-self: center;
+  font-family: 'Catamaran';
 `;
 
 // TODO: add back in later

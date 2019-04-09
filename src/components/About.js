@@ -59,9 +59,8 @@ const Blurb = styled.div`
 `;
 
 const ImageGridTitle = styled.div`
+  width: 90%;
   margin-bottom: 20px;
-  margin-left: 55px;
-  align-self: flex-start;
 `;
 
 const ImageGrid = styled.div`
