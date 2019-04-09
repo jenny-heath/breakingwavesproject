@@ -111,7 +111,7 @@ class About extends Component {
     return (
       <Wrapper>
         <TopBar>
-          <Logo to="/">
+          <Logo to="/breakingwavesproject">
             go back
           </Logo>
           <SiteComing> SITE COMING FALL 2019 </SiteComing>

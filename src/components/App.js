@@ -97,7 +97,7 @@ class App extends Component {
               <Title>THE BREAKING WAVES PROJECT</Title>
               <Subtitle>cultivating culture | shift connections</Subtitle>
             </TitleWrapper>
-            <LearnMoreLink to="/about">
+            <LearnMoreLink to="/breakingwavesproject/about">
               LEARN MORE
             </LearnMoreLink>
           </Wrapper>
