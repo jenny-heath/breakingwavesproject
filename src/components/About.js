@@ -12,8 +12,8 @@ import KoroRulesTheSun from '../static/kororulesthesun.png';
 import MalaForever from '../static/mala_forever.png';
 import OurHistory from '../static/our_history.jpg';
 import PalestineMusicExpo from '../static/palestine_music_expo.jpg';
-import StandingRockSyllabus from '../static/standing_rock_syllabus.png';
 import YaaSamar from '../static/yaa_samar.png';
+import QueerNature from '../static/queer_nature.jpg';
 
 const Wrapper = styled.div`
   position: absolute;
@@ -122,69 +122,69 @@ class About extends Component {
         <ImageGridTitle>Some inspiration / activation while you wait...</ImageGridTitle>
         <ImageGrid>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="http://www.alqaws.org/news/alQaws-Releases-Second-Single-from-Singing-Sexuality-2-?category_id=0" target="_blank">
               <Image src={Alquaws} />
               <ImageOverlay>Alquaws</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="https://www.facebook.com/departamentodelacomida/" target="_blank">
               <Image src={ElDepartamento} />
               <ImageOverlay>El Departamento</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="http://evanbissell.com/morris-justice-project-1" target="_blank">
               <Image src={FramesForLife} />
               <ImageOverlay>Frames For Life</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="https://www.icollectiveinc.org/who-we-are" target="_blank">
               <Image src={ICollective} />
               <ImageOverlay>iCollective</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="https://www.ebony.com/entertainment/pose-indya-moore-colonialism-gender-binaries/" target="_blank">
               <Image src={IndyaMoore} />
               <ImageOverlay>Indya Moore</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="http://www.kororulesthesun.ink/" target="_blank">
               <Image src={KoroRulesTheSun} />
               <ImageOverlay>Koro Rules The Sun</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="https://www.malaforever.com/radical-seeds" target="_blank">
               <Image src={MalaForever} />
               <ImageOverlay>Mala Forever</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="https://oldwars.wordpress.com/" target="_blank">
               <Image src={OurHistory} />
               <ImageOverlay>Our History</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
+            <a href="https://www.palestinemusicexpo.com/" target="_blank">
               <Image src={PalestineMusicExpo} />
               <ImageOverlay>Palestine Music Expo</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
-              <Image src={StandingRockSyllabus} />
-              <ImageOverlay>Standing Rock Syllabus</ImageOverlay>
+            <a href="https://ysdt.org/" target="_blank">
+              <Image src={YaaSamar} />
+              <ImageOverlay>Yaa Samar</ImageOverlay>
             </a>
           </ImageWrapper>
           <ImageWrapper>
-            <a href="https://google.com" target="_blank">
-              <Image src={YaaSamar} />
-              <ImageOverlay>Yaa Samar</ImageOverlay>
+            <a href="https://www.queernature.org/" target="_blank">
+              <Image src={QueerNature} />
+              <ImageOverlay>Queer Nature</ImageOverlay>
             </a>
           </ImageWrapper>
         </ImageGrid>

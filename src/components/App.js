@@ -1,19 +1,6 @@
 import React, { Component } from 'react';
-// import './App.css';
 import styled from 'styled-components';
-// import Koro from '../static/kaleidescope.png';
-import Koro from '../static/kaleidescope2.png';
 import {Link} from 'react-router-dom';
-
-// TODO: figure out how to actually place this background
-const BackgroundImage = styled.img`
-  position: fixed;
-  top: 0;
-  left: 0;
-  min-height: 100%;
-  min-width: 100%;
-  max-height: 110%;
-`;
 
 const Wrapper = styled.div`
   height: 100%;
@@ -24,7 +11,6 @@ const Wrapper = styled.div`
   justify-content: space-between;
   color: white;
   font-family: 'Futura';
-  background-color: #003348;
 `;
 
 const EventsWrapper = styled.div`
@@ -81,27 +67,51 @@ const Subtitle = styled.div`
   font-family: 'Catamaran';
 `;
 
-// TODO: add back in later
-// <BackgroundImage src={Koro} />
+const VimeoWrapper = styled.div`
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   /* why was this here? */
+   /* pointer-events: none; */
+   overflow: hidden;
+`;
+
+const IframeWrapper = styled.iframe`
+   width: 100vw;
+   height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
+   min-height: 100vh;
+   min-width: 177.77vh; /* Given a 16:9 aspect ratio, 16/9*100 = 177.77 */
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+`;
+
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <Wrapper>
-            <EventsWrapper>
-              <EventLinkLeft href="https://google.com" target="_blank">LA LAUNCH - MAY 9</EventLinkLeft>
-              <EventLinkRight href="https://google.com" target="_blank">NYC LAUNCH - MAY 17</EventLinkRight>
-            </EventsWrapper>
-            <TitleWrapper>
-              <Title>THE BREAKING WAVES PROJECT</Title>
-              <Subtitle>cultivating culture | shift connections</Subtitle>
-            </TitleWrapper>
-            <LearnMoreLink to="/breakingwavesproject/about">
-              LEARN MORE
-            </LearnMoreLink>
-          </Wrapper>
-        </header>
+        <VimeoWrapper>
+           <IframeWrapper src="https://player.vimeo.com/video/247917721?background=1&autoplay=1&loop=1&byline=0&title=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></IframeWrapper>
+           <header className="App-header">
+             <Wrapper>
+               <EventsWrapper>
+                 <EventLinkLeft href="https://google.com" target="_blank">LA LAUNCH - MAY 9</EventLinkLeft>
+                 <EventLinkRight href="https://google.com" target="_blank">NYC LAUNCH - MAY 17</EventLinkRight>
+               </EventsWrapper>
+               <TitleWrapper>
+                 <Title>THE BREAKING WAVES PROJECT</Title>
+                 <Subtitle>cultivating culture | shift connections</Subtitle>
+               </TitleWrapper>
+               <LearnMoreLink to="/breakingwavesproject/about">
+                 LEARN MORE
+               </LearnMoreLink>
+             </Wrapper>
+           </header>
+        </VimeoWrapper>
       </div>
     );
   }
