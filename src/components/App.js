@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Instafeed from 'instafeed.js';
+import QueryString from 'query-string';
+
 import {
   IframeWrapper,
   ScrollDown,
@@ -20,10 +22,6 @@ class App extends Component {
     this.scrollDown = this.scrollDown.bind(this);
   }
 
-  scrollDown() {
-    this.refs.blurb.scrollIntoView({behavior: "smooth"});
-  }
-
   componentWillMount() {
     const feed = new Instafeed({
         get: 'user',
@@ -33,6 +31,17 @@ class App extends Component {
         accessToken: '1611681887.5704d35.982a24618a3e4ba584b35c55782bc66f'
     });
     feed.run();
+  }
+
+  componentDidMount() {
+    const queryString = QueryString.parse(this.props.location.search);
+    if (queryString.subscribed) {
+      this.scrollDown(this.refs.signUp);
+    }
+  }
+  
+  scrollDown(ref, behavior) {
+    ref.scrollIntoView(behavior);
   }
 
   render() {
@@ -47,7 +56,7 @@ class App extends Component {
                    <Title>THE BREAKING WAVES PROJECT</Title>
                    <Subtitle>cultivating culture | shift connections</Subtitle>
                  </TitleWrapper>
-                 <ScrollDown onClick={this.scrollDown}>
+                 <ScrollDown onClick={() => this.scrollDown(this.refs.blurb, {behavior: "smooth"})}>
                    v
                  </ScrollDown>
                </Wrapper>
@@ -58,7 +67,9 @@ class App extends Component {
           <Blurb />
         </div>
         <About />
-        <SignUp />
+        <div ref="signUp">
+          <SignUp queryString={this.props.location.search} />
+        </div>
         <div id="instafeed"></div>
         <Footer />
       </div>
