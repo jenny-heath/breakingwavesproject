@@ -1,196 +1,46 @@
 import React, { Component } from 'react';
-import styled from 'styled-components';
-import {Link} from 'react-router-dom';
-
-import Discwoman from '../static/discwoman.jpg';
-import Alquaws from '../static/alquaws_bashar_murad.png';
-import ElDepartamento from '../static/el_departamento.jpg';
-import FramesForLife from '../static/frames_for_life.jpg';
-import ICollective from '../static/icollective.png';
-import IndyaMoore from '../static/indya_moore.jpg';
-import KoroRulesTheSun from '../static/kororulesthesun.png';
-import MalaForever from '../static/mala_forever.png';
-import OurHistory from '../static/our_history.jpg';
-import PalestineMusicExpo from '../static/palestine_music_expo.jpg';
-import YaaSamar from '../static/yaa_samar.png';
-import QueerNature from '../static/queer_nature.jpg';
-
-const Wrapper = styled.div`
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  background-color: #003348;
-  color: white;
-  font-family: 'Futura';
-`;
-
-const TopBar = styled.div`
-  width: 100%;
-  display: flex;
-  margin-top: 10px;
-  margin-bottom: 50px;
-`;
-
-const Logo = styled(Link)`
-  margin-left: 20px;
-  flex-grow: 5;
-  text-decoration: none;
-  color: white;
-  :hover {
-    color: #15697A;
-  }
-`;
-
-const SiteComing = styled.div`
-  flex-grow: 6;
-`;
-
-const FestComing = styled.div`
-  margin-bottom: 100px;
-`;
-
-const Blurb = styled.div`
-  margin-top: 50px;
-  margin-bottom: 150px;
-  width: 500px;
-`;
-
-const ImageGridTitle = styled.div`
-  width: 90%;
-  margin-bottom: 20px;
-`;
-
-const ImageGrid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  width: 90%;
-`;
-
-const Image = styled.img`
-  width: 100%;
-`;
-
-const ImageOverlay = styled.div`
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  width: 100%;
-  opacity: 0;
-  transition: .5s ease;
-  background-color: #000;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-`;
-
-const ImageWrapper = styled.div`
-  height: 201px;
-  width: 30%;
-  overflow: hidden;
-  margin-right: 20px;
-  margin-bottom: 20px;
-  position: relative;
-  :hover ${ImageOverlay} {
-    opacity: 0.5;
-  }
-  :hover ${Image} {
-    opacity: 0.5;
-  }
-`;
+import {
+  Title,
+  SectionsWrapper,
+  Section,
+  SiteComing,
+  Wrapper,
+} from '../styles/About';
 
 class About extends Component {
   render() {
     return (
       <Wrapper>
-        <TopBar>
-          <Logo to="/breakingwavesproject">
-            go back
-          </Logo>
-          <SiteComing> SITE COMING FALL 2019 </SiteComing>
-        </TopBar>
-        <Blurb>
-          THE BREAKING WAVES PROJECT seeks to amplify artists & creative ventures that help us decolonize our imaginations, the places we come from, & the places we call home.
-        </Blurb>
-        <FestComing>FEST COMING FALL 2021 (NYC)</FestComing>
-        <ImageGridTitle>Some inspiration / activation while you wait...</ImageGridTitle>
-        <ImageGrid>
-          <ImageWrapper>
-            <a href="http://www.alqaws.org/news/alQaws-Releases-Second-Single-from-Singing-Sexuality-2-?category_id=0" target="_blank">
-              <Image src={Alquaws} />
-              <ImageOverlay>Alquaws</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://www.facebook.com/departamentodelacomida/" target="_blank">
-              <Image src={ElDepartamento} />
-              <ImageOverlay>El Departamento</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="http://evanbissell.com/morris-justice-project-1" target="_blank">
-              <Image src={FramesForLife} />
-              <ImageOverlay>Frames For Life</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://www.icollectiveinc.org/who-we-are" target="_blank">
-              <Image src={ICollective} />
-              <ImageOverlay>iCollective</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://www.ebony.com/entertainment/pose-indya-moore-colonialism-gender-binaries/" target="_blank">
-              <Image src={IndyaMoore} />
-              <ImageOverlay>Indya Moore</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="http://www.kororulesthesun.ink/" target="_blank">
-              <Image src={KoroRulesTheSun} />
-              <ImageOverlay>Koro Rules The Sun</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://www.malaforever.com/radical-seeds" target="_blank">
-              <Image src={MalaForever} />
-              <ImageOverlay>Mala Forever</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://oldwars.wordpress.com/" target="_blank">
-              <Image src={OurHistory} />
-              <ImageOverlay>Our History</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://www.palestinemusicexpo.com/" target="_blank">
-              <Image src={PalestineMusicExpo} />
-              <ImageOverlay>Palestine Music Expo</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://ysdt.org/" target="_blank">
-              <Image src={YaaSamar} />
-              <ImageOverlay>Yaa Samar</ImageOverlay>
-            </a>
-          </ImageWrapper>
-          <ImageWrapper>
-            <a href="https://www.queernature.org/" target="_blank">
-              <Image src={QueerNature} />
-              <ImageOverlay>Queer Nature</ImageOverlay>
-            </a>
-          </ImageWrapper>
-        </ImageGrid>
+        <SectionsWrapper>
+          <Section><strong>THE BREAKING WAVES PROJECT is</strong></Section>
+          <Section>about amplifying shifts already in motion across our cultural landscapes...</Section>
+
+          <Section>Cultural institutions making bold curatorial choices</Section>
+
+          <Section>Influencers taking public stands for justice</Section>
+
+          <Section>Artists offering creative tools that are helping the grassroots build power</Section>
+
+          <Section>There's a sea change happening...</Section>
+          <Section>It's growing...</Section>
+          <Section>Let's take it to the next level!</Section>
+          <SiteComing>SITE COMING FALL 2019</SiteComing>
+        </SectionsWrapper>
       </Wrapper>
     );
   }
 }
 
+// <Title>THE BREAKING WAVES PROJECT is...</Title>
+// <SectionsWrapper>
+//   <Section>
+//     A resource hub that amplifies creative projects and multimedia tools for decolonizing our imaginations, the places we come from, and the places we call home.
+//   </Section>
+//   <Section>
+//     A festival shaped by artists who invite us to think critically about and actively address legacies of settler colonialism, while celebrating resiliency & our interconnected freedom.
+//   </Section>
+//   <Section>
+//     A think | tank that calls in art worlds & audiences to explore what culture|shift means, what’s at stake, & how to move it forward more powerfully together.
+//   </Section>
+// </SectionsWrapper>
 export default About;

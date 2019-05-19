@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import {Link} from 'react-router-dom';
 
 export const IframeWrapper = styled.iframe`
    width: 100vw;
@@ -26,10 +25,6 @@ export const ScrollDown = styled.div`
   }
 `;
 
-export const MainPage = styled.div`
-  height: 1000px;
-`;
-
 export const Subtitle = styled.div`
   align-self: center;
   font-family: 'Catamaran';
@@ -37,7 +32,7 @@ export const Subtitle = styled.div`
 
 export const Title = styled.div`
   align-self: center;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: bold;
 `;
 

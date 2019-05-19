@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
   IframeWrapper,
-  MainPage,
   ScrollDown,
   Subtitle,
   Title,
@@ -9,6 +8,10 @@ import {
   VimeoWrapper,
   Wrapper,
 } from '../styles/App';
+import Blurb from './Blurb';
+import About from './About';
+import SignUp from './SignUp';
+import Footer from './Footer';
 
 class App extends Component {
   constructor(props) {
@@ -17,7 +20,7 @@ class App extends Component {
   }
 
   scrollDown() {
-    this.refs.mainPage.scrollIntoView({behavior: "smooth"});
+    this.refs.blurb.scrollIntoView({behavior: "smooth"});
   }
 
   render() {
@@ -39,9 +42,12 @@ class App extends Component {
              </header>
           </VimeoWrapper>
         </div>
-        <MainPage ref="mainPage">
-
-        </MainPage>
+        <div ref="blurb">
+          <Blurb />
+        </div>
+        <About />
+        <SignUp />
+        <Footer />
       </div>
     );
   }
