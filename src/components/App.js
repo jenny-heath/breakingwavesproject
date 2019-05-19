@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Instafeed from 'instafeed.js';
 import {
   IframeWrapper,
   ScrollDown,
@@ -21,6 +22,17 @@ class App extends Component {
 
   scrollDown() {
     this.refs.blurb.scrollIntoView({behavior: "smooth"});
+  }
+
+  componentWillMount() {
+    const feed = new Instafeed({
+        get: 'user',
+        // userId: '12982224536', // bwp
+        userId: '1611681887', // me
+        clientId: '5704d35b094b41f7bf2e30df3480b271',
+        accessToken: '1611681887.5704d35.982a24618a3e4ba584b35c55782bc66f'
+    });
+    feed.run();
   }
 
   render() {
@@ -47,6 +59,7 @@ class App extends Component {
         </div>
         <About />
         <SignUp />
+        <div id="instafeed"></div>
         <Footer />
       </div>
     );
